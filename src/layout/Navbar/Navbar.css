@@ -1,0 +1,82 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.navbar-left-side,
+.navbar-right-side {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar-left-side a {
+    font-family: 'SoDoSans-B';
+}
+.navbar-right-side a {
+    font-family: 'SoDoSans-SB';
+}
+
+.navbar-links ul {
+    display: flex;
+    gap: 24px;
+}
+.navbar-links ul li:hover a {
+    color: #00754A;
+}
+.find-a-store:hover a {
+    color: #00754A;
+}
+
+.navbar-links ul a {
+    color: #000000DE;
+    letter-spacing: 1px;
+}
+
+.find-a-store a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #000000DE;
+}
+
+.find-a-store svg {
+    font-size: 24px;
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+.sign a {
+    color: #000000DE;
+    transition: .3s;
+}
+.sign-in:hover a {
+    background-color: #e5e5e5;
+}
+.sign-in a {
+    border: 1px solid #000000DE;
+    border-radius: 20px;
+    padding: 7px 16px;
+}
+.join-now a {
+    border: 1px solid #000000DE;
+    border-radius: 20px;
+    padding: 7px 16px;
+    background-color: #000000DE;
+    transition: .3s;
+    color: #fff;
+}
+.join-now:hover a {
+    background-color: #4c4c4c;
+}
