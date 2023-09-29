@@ -1,0 +1,36 @@
+footer {
+    padding: 24px 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 3px, rgba(0, 0, 0, 0.06) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px 0px 2px;
+}
+.footer-top {
+    display: flex;
+    gap: 32px;
+}
+.footer-box {
+    width: 16%;
+    font-family: 'SoDoSans-R';
+}
+.footer-box h3 {
+    font-size: 19px;
+    margin-bottom: 24px;
+}
+.footer-box li {
+    padding: 12px 0;
+    margin-bottom: 8px;
+    letter-spacing: 0.2px;
+}
+.footer-box li a {
+    color: #00000094;
+    transition: .1s;
+}
+.footer-box a:hover {
+    color: #000000DE;
+}
+.footer-line {
+    border-top: 2px solid #E5E5E5;
+    margin: 32px 0;
+}
+.footer-socials img {
+    width: 32px;
+    height: 32px;
+}
