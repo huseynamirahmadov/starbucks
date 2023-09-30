@@ -1,6 +1,10 @@
 import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
+import { BsSpotify, BsFacebook, BsPinterest } from 'react-icons/bs';
+import { GrInstagram, GrTwitter } from 'react-icons/gr';
+import { AiFillYoutube } from 'react-icons/ai';
+
 
 
 
@@ -64,13 +68,25 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-socials">
             <ul>
-              <li><Link to='#'></Link></li>
-              <li><Link to='#'></Link></li>
-              <li><Link to='#'></Link></li>
-              <li><Link to='#'></Link></li>
-              <li><Link to='#'></Link></li>
-              <li><Link to='#'></Link></li>
+              <li><Link to='#'><BsSpotify /></Link></li>
+              <li><Link to='#'><BsFacebook /></Link></li>
+              <li><Link to='#'><BsPinterest /></Link></li>
+              <li><Link to='#'><GrInstagram /></Link></li>
+              <li><Link to='#'><AiFillYoutube /></Link></li>
+              <li><Link to='#'><GrTwitter /></Link></li>
             </ul>
+          </div>
+          <div className="footer-bottom-links">
+            <ul>
+              <li><Link to='#'>Privacy Notice</Link></li>
+              <li><Link to='#'>Terms of Use</Link></li>
+              <li><Link to='#'>Do Not Share My Personal Information</Link></li>
+              <li><Link to='#'>CA Supply Chain Act</Link></li>
+              <li><Link to='#'>Cookie Preferences</Link></li>
+            </ul>
+          </div>
+          <div className='copyright'>
+            <p>© 2023 Starbucks Coffee Company. All rights reserved.</p>
           </div>
         </div>
       </div>
