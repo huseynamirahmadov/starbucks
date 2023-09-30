@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { MdLocationOn } from 'react-icons/md';
 import MainLogo from '../../components/MainLogo';
 
@@ -15,23 +15,23 @@ const Navbar = () => {
                             <div className="navbar-links">
                                 <ul>
                                     <li>
-                                        <Link to='/menu'>MENU</Link>
+                                        <NavLink to='/menu'>MENU</NavLink>
                                     </li>
                                     <li>
-                                        <Link to='/rewards'>REWARDS</Link>
+                                        <NavLink to='/rewards'>REWARDS</NavLink>
                                     </li>
                                     <li>
-                                        <Link to='/giftcards'>GIFT CARDS</Link>
+                                        <NavLink to='/giftcards'>GIFT CARDS</NavLink>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="navbar-right-side">
                             <div className="find-a-store">
-                                <Link to='/findastore'>
+                                <NavLink to='/findastore'>
                                     <MdLocationOn />
                                     <span>Find a store</span>
-                                </Link>
+                                </NavLink>
                             </div>
                             <div className="sign">
                                 <div className="sign-in">
