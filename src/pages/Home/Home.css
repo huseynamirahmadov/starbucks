@@ -70,9 +70,7 @@
 .home-cnt:nth-child(3) .home-cnt-right-side {
     background-color: #1e3932;
 }
-.home-cnt:nth-child(2) {
-    flex-direction: row-reverse;
-}
+.home-cnt:nth-child(2),
 .home-cnt:nth-child(4) {
     flex-direction: row-reverse;
 }
