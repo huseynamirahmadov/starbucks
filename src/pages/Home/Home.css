@@ -80,6 +80,9 @@
 .home-cnt:nth-child(5) .home-cnt-right-side {
     background-color: #d69a2d;
 }
+.home-cnt:nth-child(5) .home-cnt-right-side-button:hover a {
+    background-color: #c3902d;
+}
 .home-details {
     padding: 32px 0;
     text-align: center;
