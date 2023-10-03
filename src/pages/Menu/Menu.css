@@ -1,0 +1,66 @@
+.menu-container {
+    max-width: 1022px;
+    margin: 0 auto;
+}
+.menu-content {
+    padding: 50px 0;
+    display: flex;
+    gap: 125px;
+}
+.menu-categories {
+    width: 15%;
+}
+.menu-categories h3 {
+    font-size: 19px;
+    font-family: 'SoDoSans-SB';
+    margin-bottom: 22px;
+    letter-spacing: -0.01em;
+}
+
+.menu-categories ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.menu-categories ul a {
+    color: #00000094;
+    font-family: 'SoDoSans-R';
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+}
+
+
+.menu-products {
+    width: 50%;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+row-gap: 25px;
+}
+.menu-products h2 {
+    font-family: 'SoDoSans-B';
+    font-size: 28px;
+    margin-bottom: 48px;
+}
+.menu-products h3 {
+    font-family: 'SoDoSans-Sb';
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.product-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.product-item-title {
+    font-family: 'SoDoSans-R';
+    font-size: 19px;
+}
+.product-item-img img {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    object-fit: contain;
+}
