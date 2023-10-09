@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './Menu.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchContent } from '../../redux/slice/contentSlice'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
 
@@ -14,8 +15,8 @@ const Menu = () => {
   const contents = useSelector((state) => state.content.contents)
   const isLoading = useSelector((state) => state.content.isLoading)
   const error = useSelector((state) => state.content.error)
-  const subcategory = [...new Set(contents.map(item => item.subcategory))]
-  console.log(subcategory)
+  const uniqueSubcategories = [...new Set(contents.map(item => item.subcategory))];
+  const firstItems = uniqueSubcategories.map(subcategory => contents.find(item => item.subcategory === subcategory));
 
   return (
     <div className="menu-container">
@@ -24,8 +25,8 @@ const Menu = () => {
           <h3>Drinks</h3>
           <ul>
             {
-              subcategory.map(item => {
-                return <li><a href={`/menu/${item}`}>{item}</a></li>
+              uniqueSubcategories.map(item => {
+                return <li><Link to={`/menu/${item}`}>{item}</Link></li>
               })
             }
           </ul>
@@ -34,38 +35,18 @@ const Menu = () => {
           <h2>Menu</h2>
           <h3>Drinks</h3>
           <div className="products">
-            <div className='product-item'>
-              <div className="product-item-img">
-                <img src='https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_topcrop_630' />
+            {firstItems.map((item, index) => (
+              <div className='product-item' key={item.id}>
+                <Link to={`/menu/${item.subcategory}`}>
+                  <div className="product-item-img">
+                    <img src={item.img} />
+                  </div>
+                  <div className="product-item-title">
+                    {item.subcategory}
+                  </div>
+                </Link>
               </div>
-              <div className="product-item-title">
-                Oleato
-              </div>
-            </div>
-            <div className='product-item'>
-              <div className="product-item-img">
-                <img src='https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_topcrop_630' />
-              </div>
-              <div className="product-item-title">
-                Oleato
-              </div>
-            </div>
-            <div className='product-item'>
-              <div className="product-item-img">
-                <img src='https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_topcrop_630' />
-              </div>
-              <div className="product-item-title">
-                Oleato
-              </div>
-            </div>
-            <div className='product-item'>
-              <div className="product-item-img">
-                <img src='https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_topcrop_630' />
-              </div>
-              <div className="product-item-title">
-                Oleato
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
