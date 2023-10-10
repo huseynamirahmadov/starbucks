@@ -11,6 +11,8 @@ import JoinNow from './pages/JoinNow';
 import NotFound from './pages/NotFound';
 import Footer from './layout/Footer';
 import Navbar from './layout/Navbar';
+import Products from './pages/Products';
+import Product from './pages/Product';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/menu' element={<Menu />} />
+        <Route path='/menu/:cat' element={<Products />}/>
+        <Route path='/menu/:cat/:product' element={<Product />}/>
         <Route path='/rewards' element={<Rewards />} />
         <Route path='/giftcards' element={<GiftCards />} />
         <Route path='/findastore' element={<FindaStore />} />
