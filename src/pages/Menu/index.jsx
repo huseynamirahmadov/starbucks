@@ -3,23 +3,24 @@ import './Menu.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchContent } from '../../redux/slice/contentSlice'
 import { Link } from 'react-router-dom'
+import menuLoadingImg from '../../assets/images/menuloadingimg.png'
 
 const Menu = () => {
-
   const dispatch = useDispatch()
-
   useEffect(() => {
     dispatch(fetchContent())
   }, [dispatch])
 
-  const contents = useSelector((state) => state.content.contents)
-  const isLoading = useSelector((state) => state.content.isLoading)
-  const error = useSelector((state) => state.content.error)
+  const contents = useSelector(state => state.content.contents)
+  const isLoading = useSelector(state => state.content.isLoading)
+  const error = useSelector(state => state.content.error)
   const uniqueSubcategories = [...new Set(contents.map(item => item.subcategory))];
   const firstItems = uniqueSubcategories.map(subcategory => contents.find(item => item.subcategory === subcategory));
 
   return (
-    <div className="menu-container">
+    isLoading ? <div className='menuLoading'>
+      <img src={menuLoadingImg} />
+    </div> : <div className="menu-container">
       <div className="menu-content">
         <div className="menu-categories">
           <h3>Drinks</h3>
@@ -35,7 +36,7 @@ const Menu = () => {
           <h2>Menu</h2>
           <h3>Drinks</h3>
           <div className="products">
-            {firstItems.map((item, index) => (
+            {firstItems.map(item => (
               <div className='product-item' key={item.id}>
                 <Link to={`/menu/${item.subcategory}`}>
                   <div className="product-item-img">
