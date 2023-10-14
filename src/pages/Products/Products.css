@@ -1,0 +1,17 @@
+.speedbar a {
+    font-family: 'SoDoSans-R';
+    color: #00000094;
+}
+.speedbar {
+    color: #00000094;
+    padding-bottom: 24px;
+}
+.speedbar span {
+    font-family: 'SoDoSans-SB';
+}
+
+.menu-products h4 {
+    font-family: 'SoDoSans-B';
+    font-size: 28px;
+    padding-bottom: 48px;
+}

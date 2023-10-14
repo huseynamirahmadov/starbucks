@@ -1,0 +1,23 @@
+.menu-categories {
+    width: 15%;
+}
+
+.menu-categories h3 {
+    font-size: 19px;
+    font-family: 'SoDoSans-SB';
+    margin-bottom: 22px;
+    letter-spacing: -0.01em;
+}
+
+.menu-categories ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menu-categories ul a {
+    color: #00000094;
+    font-family: 'SoDoSans-R';
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+}
