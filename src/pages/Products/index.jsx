@@ -3,7 +3,7 @@ import './Products.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import { fetchContent } from '../../redux/slice/contentSlice'
-import MenuCategories from '../MenuCategories'
+import MenuCategories from '../../components/MenuCategories'
 import menuLoadingImg from '../../assets/images/menuloadingimg.png'
 
 const Products = () => {

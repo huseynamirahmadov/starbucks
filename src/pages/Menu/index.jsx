@@ -1,7 +1,7 @@
 import React from 'react'
 import './Menu.css'
-import MenuCategories from '../MenuCategories'
-import MenuProducts from '../MenuProducts'
+import MenuCategories from '../../components/MenuCategories'
+import MenuProducts from '../../components/MenuProducts'
 
 const Menu = () => {
   return (
