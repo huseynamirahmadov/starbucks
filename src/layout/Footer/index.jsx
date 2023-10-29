@@ -11,9 +11,9 @@ import { AiFillYoutube } from 'react-icons/ai';
 const Footer = () => {
   return (
     <footer>
-      <div className="container">
-        <div className="footer-top">
-          <div className="footer-box">
+      <div className='container'>
+        <div className='footer-top'>
+          <div className='footer-box'>
             <h3>About Us</h3>
             <ul>
               <li><Link to='#'>Our Company</Link></li>
@@ -25,7 +25,7 @@ const Footer = () => {
               <li><Link to='#'>Contact Us</Link></li>
             </ul>
           </div>
-          <div className="footer-box">
+          <div className='footer-box'>
             <h3>Careers</h3>
             <ul>
               <li><Link to='#'>Culture and Values </Link></li>
@@ -36,7 +36,7 @@ const Footer = () => {
               <li><Link to='#'>International Careers</Link></li>
             </ul>
           </div>
-          <div className="footer-box">
+          <div className='footer-box'>
             <h3>Social Impact</h3>
             <ul>
               <li><Link to='#'>People</Link></li>
@@ -44,7 +44,7 @@ const Footer = () => {
               <li><Link to='#'>Environmental and Social Impact Reporting</Link></li>
             </ul>
           </div>
-          <div className="footer-box">
+          <div className='footer-box'>
             <h3>For Business Partners</h3>
             <ul>
               <li><Link to='#'>Landlord Support Center</Link></li>
@@ -53,7 +53,7 @@ const Footer = () => {
               <li><Link to='#'>Office and Foodservice Coffee</Link></li>
             </ul>
           </div>
-          <div className="footer-box">
+          <div className='footer-box'>
             <h3>Order and Pick Up</h3>
             <ul>
               <li><Link to='#'>Order on the App</Link></li>
@@ -64,9 +64,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="footer-line"></div>
-        <div className="footer-bottom">
-          <div className="footer-socials">
+        <div className='footer-line'></div>
+        <div className='footer-bottom'>
+          <div className='footer-socials'>
             <ul>
               <li><Link to='#'><BsSpotify /></Link></li>
               <li><Link to='#'><BsFacebook /></Link></li>
@@ -76,7 +76,7 @@ const Footer = () => {
               <li><Link to='#'><GrTwitter /></Link></li>
             </ul>
           </div>
-          <div className="footer-bottom-links">
+          <div className='footer-bottom-links'>
             <ul>
               <li><Link to='#'>Privacy Notice</Link></li>
               <li><Link to='#'>Terms of Use</Link></li>

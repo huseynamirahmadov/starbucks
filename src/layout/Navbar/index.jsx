@@ -7,12 +7,12 @@ import MainLogo from '../../components/MainLogo';
 const Navbar = () => {
     return (
         <>
-            <div className="navbar-box-shadow">
-                <div className="container">
-                    <div className="navbar">
-                        <div className="navbar-left-side">
+            <div className='navbar-box-shadow'>
+                <div className='container'>
+                    <div className='navbar'>
+                        <div className='navbar-left-side'>
                             <MainLogo />
-                            <div className="navbar-links">
+                            <div className='navbar-links'>
                                 <ul>
                                     <li>
                                         <NavLink to='/menu'>MENU</NavLink>
@@ -26,20 +26,20 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="navbar-right-side">
-                            <div className="find-a-store">
+                        <div className='navbar-right-side'>
+                            <div className='find-a-store'>
                                 <NavLink to='/findastore'>
                                     <MdLocationOn />
                                     <span>Find a store</span>
                                 </NavLink>
                             </div>
-                            <div className="sign">
-                                <div className="sign-in">
+                            <div className='sign'>
+                                <div className='sign-in'>
                                     <Link to='signin'>
                                         Sign in
                                     </Link>
                                 </div>
-                                <div className="join-now">
+                                <div className='join-now'>
                                     <Link to='joinnow'>
                                         Join now
                                     </Link>

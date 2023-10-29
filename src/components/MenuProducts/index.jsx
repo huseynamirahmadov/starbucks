@@ -16,25 +16,25 @@ const MenuProducts = () => {
   const firstItems = uniqueSubcategories.map(subcategory => contents.find(item => item.subcategory === subcategory));
   return (
     isLoading ? <div className='menuLoading'>
-    <img src={menuLoadingImg} />
-  </div> : <div className="menu-products">
-          <h2>Menu</h2>
-          <h3>Drinks</h3>
-          <div className="products">
-            {firstItems.map(item => (
-              <div className='product-item' key={item.id}>
-                <Link to={`/menu/${item.subcategory}`}>
-                  <div className="product-item-img">
-                    <img src={item.img} />
-                  </div>
-                  <div className="product-item-title">
-                    {item.subcategory}
-                  </div>
-                </Link>
+      <img src={menuLoadingImg} />
+    </div> : <div className='menu-products'>
+      <h2>Menu</h2>
+      <h3>Drinks</h3>
+      <div className='products'>
+        {firstItems.map(item => (
+          <div className='product-item' key={item.id}>
+            <Link to={`/menu/${item.subcategory}`}>
+              <div className='product-item-img'>
+                <img src={item.img} />
               </div>
-            ))}
+              <div className='product-item-title'>
+                {item.subcategory}
+              </div>
+            </Link>
           </div>
-        </div>
+        ))}
+      </div>
+    </div>
   )
 }
 

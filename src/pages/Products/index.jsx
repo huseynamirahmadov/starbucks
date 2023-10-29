@@ -19,26 +19,26 @@ const Products = () => {
 
     return (
         <div className='menu-container'>
-            <div className="menu-content">
+            <div className='menu-content'>
                 <MenuCategories />
                 {
                     isLoading ? <div className='menuLoading'>
                         <img src={menuLoadingImg} />
-                    </div> : <div className="menu-products">
-                        <div className="speedbar">
+                    </div> : <div className='menu-products'>
+                        <div className='speedbar'>
                             <Link to='/menu'>Menu</Link> / <span>{cat}</span>
                         </div>
                         <h4>{cat}</h4>
-                        <div className="products">
+                        <div className='products'>
                             {
                                 contents.filter(item => item.subcategory === cat).map(item => {
                                     return (
                                         <div className='product-item' key={item.id}>
                                             <Link to={`/menu/${cat}/${item.name}`}>
-                                                <div className="product-item-img">
+                                                <div className='product-item-img'>
                                                     <img src={item.img} />
                                                 </div>
-                                                <div className="product-item-title">
+                                                <div className='product-item-title'>
                                                     {item.name}
                                                 </div>
                                             </Link>

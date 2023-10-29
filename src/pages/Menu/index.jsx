@@ -5,8 +5,8 @@ import MenuProducts from '../../components/MenuProducts'
 
 const Menu = () => {
   return (
-    <div className="menu-container">
-      <div className="menu-content">
+    <div className='menu-container'>
+      <div className='menu-content'>
         <MenuCategories />
         <MenuProducts />
       </div>
