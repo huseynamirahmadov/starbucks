@@ -17,8 +17,8 @@ const MenuCategories = () => {
           <h3>Drinks</h3>
           <ul>
             {
-              uniqueSubcategories.map(item => {
-                return <li><Link to={`/menu/${item}`}>{item}</Link></li>
+              uniqueSubcategories.map((item, i) => {
+                return <li key={i}><Link to={`/menu/${item}`}>{item}</Link></li>
               })
             }
           </ul>

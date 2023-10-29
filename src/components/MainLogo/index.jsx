@@ -1,6 +1,6 @@
 import React from 'react';
 import './MainLogo.css';
-import StrLogo from '../../assets/images/starbucks-logo.svg';
+import StrLogo from '/starbucks-logo.svg';
 import { Link } from 'react-router-dom';
 
 const MainLogo = () => {

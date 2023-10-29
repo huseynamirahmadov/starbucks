@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import { fetchContent } from '../../redux/slice/contentSlice'
 import menuLoadingImg from '../../assets/images/menuloadingimg.png'
+
 const Product = () => {
   const dispatch = useDispatch()
   useEffect(() => {
@@ -12,9 +13,6 @@ const Product = () => {
 
   const contents = useSelector(state => state.content.contents)
   const isLoading = useSelector(state => state.content.isLoading)
-  const error = useSelector(state => state.content.error)
-  const uniqueSubcategories = [...new Set(contents.map(item => item.subcategory))];
-  const firstItems = uniqueSubcategories.map(subcategory => contents.find(item => item.subcategory === subcategory));
   const { cat } = useParams();
   const { product } = useParams();
   const [size, setSize] = useState('Grande');
@@ -59,9 +57,10 @@ const Product = () => {
             <h3>Size options</h3>
             <div className="product-sizes">
               {
-                contents.filter(item => (item.subcategory === cat) && (item.name === product)).map(item => item.sizes.map(item => {
+                contents.filter(item => (item.subcategory === cat) && (item.name === product)).map((item, i) => item.sizes.map((item, j) => {
+                  const uniqueKey = i - j;
                   return (
-                    <div onClick={() => setSize(item.size)} className="product-size">
+                    <div key={uniqueKey} onClick={() => setSize(item.size)} className="product-size">
                       <div className="product-size-img">
                         {
                           <img src={size !== item.size ? item.url : item.surl} />
