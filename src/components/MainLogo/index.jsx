@@ -1,13 +1,13 @@
 import React from 'react';
 import './MainLogo.css';
-import NavbarLogo from '../../assets/images/starbucks-logo.svg';
+import StrLogo from '../../assets/images/starbucks-logo.svg';
 import { Link } from 'react-router-dom';
 
 const MainLogo = () => {
   return (
     <div className='main-logo'>
       <Link to='/'>
-        <img src={NavbarLogo} />
+        <img src={StrLogo} />
       </Link>
     </div>
   )

@@ -1,0 +1,61 @@
+.md-click-circle {
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+}
+
+.md-click-circle.md-click-animate {
+    -webkit-animation: mdClickEffect .65s linear;
+    -moz-animation: mdClickEffect .65s linear;
+    animation: mdClickEffect .65s linear;
+}
+
+@-webkit-keyframes mdClickEffect {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        opacity: 0 !important;
+        -webkit-transform: scale(2.5);
+    }
+}
+
+@-moz-keyframes mdClickEffect {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        opacity: 0 !important;
+        -moz-transform: scale(2.5);
+    }
+}
+
+@keyframes mdClickEffect {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        opacity: 0 !important;
+        transform: scale(2.5);
+    }
+}
+
+/**********OTHERS************/
+.material-click:not(.md-skip) {
+    overflow: hidden;
+}
+
+.material-on-me:not(.md-skip) {
+    position: relative;
+}

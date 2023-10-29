@@ -13,6 +13,7 @@ import Footer from './layout/Footer';
 import Navbar from './layout/Navbar';
 import Products from './pages/Products';
 import Product from './pages/Product';
+import AuthInput from './components/AuthInput';
 
 function App() {
   return (
