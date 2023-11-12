@@ -11,7 +11,7 @@ export const fetchContent = createAsyncThunk(
   "content/fetchContent",
   async () => {
     const res = await axios(
-      "https://starbucks-data.vercel.app/data/Starbucks.json"
+      import.meta.env.VITE_API_URL
     );
     const data = await res.data;
     return data;
