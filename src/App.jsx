@@ -1,6 +1,6 @@
 import './assets/style/index.css';
 import './assets/style/app.css';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Rewards from './pages/Rewards';
@@ -21,8 +21,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/menu' element={<Menu />} />
-        <Route path='/menu/:cat' element={<Products />}/>
-        <Route path='/menu/:cat/:product' element={<Product />}/>
+        <Route path='/menu/:cat' element={<Products />} />
+        <Route path='/menu/:cat/:product' element={<Product />} />
         <Route path='/rewards' element={<Rewards />} />
         <Route path='/giftcards' element={<GiftCards />} />
         <Route path='/findastore' element={<FindaStore />} />
