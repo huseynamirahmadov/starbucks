@@ -6,6 +6,7 @@ import { fetchContent } from '../../redux/slice/contentSlice'
 import menuLoadingImg from '../../assets/images/menuloadingimg.png'
 import { CiLocationOn } from 'react-icons/ci'
 import selectIcon from '../../assets/images/select-icon.svg'
+import ChevronDown from '../../assets/icons/ChevronDown'
 
 const Product = () => {
   const dispatch = useDispatch()
@@ -42,7 +43,21 @@ const Product = () => {
   return (
     isLoading ? <div className='menuLoading'>
       <img src={menuLoadingImg} />
-    </div> : <>
+    </div> : <div className='product-content'>
+      <div className='add-to-cart-bar'>
+        <div className='product-location-select'>
+          <div className="product-location-select-title">
+            <h5>For itemavailablity</h5>
+            <p>Choose a store</p>
+          </div>
+          <div className="product-location-select-icon">
+            <ChevronDown />
+          </div>
+        </div>
+        <div className='product-cart-icon'>
+          <img src="https://www.starbucks.com/app-assets/d21adfaa60a934de88eb1cc00c315e52.svg" alt="" />
+        </div>
+      </div>
       <div className='product-speedbar'>
         <div className='menu-container'>
           <Link to='/menu'>Menu</Link> / <Link to={`/menu/${cat}`}>{cat}</Link> / <span>{product}</span>
@@ -153,7 +168,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

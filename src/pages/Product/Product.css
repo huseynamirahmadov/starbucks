@@ -244,3 +244,39 @@
 .material-on-me:not(.md-skip) {
     position: relative;
 }
+
+.add-to-cart-bar {
+    width: 100%;
+    padding: 22px 0;
+    background-color: #1e3932;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-family: 'SoDoSans-R';
+}
+.product-content {
+    position: relative;
+}
+.product-cart-icon img {
+    background-image: url('https://www.starbucks.com/app-assets/d21adfaa60a934de88eb1cc00c315e52.svg');
+}
+.product-location-select {
+    border-bottom: 2px solid #627570;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.product-location-select-title h5 {
+    color: #ffffffb3;
+}
+.product-location-select-title p {
+    color: #fff;
+    font-family: 'SoDoSans-B';
+    padding: 8px 0;
+}
+.product-location-select-icon path {
+    fill: #fff;
+}
